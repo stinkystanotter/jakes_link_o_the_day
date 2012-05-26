@@ -1,0 +1,25 @@
+<h1>Listing topic2s</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @topic2s.each do |topic2| %>
+  <tr>
+    <td><%= topic2.title %></td>
+    <td><%= topic2.description %></td>
+    <td><%= link_to 'Show', topic2 %></td>
+    <td><%= link_to 'Edit', edit_topic2_path(topic2) %></td>
+    <td><%= link_to 'Destroy', topic2, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Topic2', new_topic2_path %>
